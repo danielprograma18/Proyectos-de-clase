@@ -13,21 +13,21 @@ public class Comprobante {
         return fecha;
     }
 
-        public void setFecha (Fecha val) {
-            this.fecha = val;
+        public void setFecha (Fecha fecha) {
+            this.fecha = fecha;
         }
         
     public int getNumero () {
         return numero;
     }
-        public void setNumero (int val) {
-            this.numero = val;
+        public void setNumero (int numero) {
+            this.numero = numero;
         }
     public char getTipo () {
         return tipo;
     }
-        public void setTipo (char var) {
-            this.tipo = var;
+        public void setTipo (char tipo) {
+            this.tipo = tipo;
         }
         
         public Comprobante(char t, int n, Fecha f){

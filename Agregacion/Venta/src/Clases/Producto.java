@@ -12,20 +12,20 @@ public class Producto {
     public int getCodigo () {
         return codigo;
     }
-        public void setCodigo (int val) {
-            this.codigo = val;
+        public void setCodigo (int codigo) {
+            this.codigo = codigo;
         }
     public String getDescripcion () {
         return descripcion;
     }
-        public void setDescripcion (String  val) {
-            this.descripcion = val;
+        public void setDescripcion (String  descripcion) {
+            this.descripcion = descripcion;
         }
     public float getPrecio () {
         return precio;
     }
-        public void setPrecio (float val) {
-            this.precio = val;
+        public void setPrecio (float precio) {
+            this.precio = precio;
         }
 
         public Producto(int c, String d, float p){

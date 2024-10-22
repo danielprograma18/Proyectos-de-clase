@@ -10,15 +10,15 @@ public class Cliente {
         public int getCodigo () {
             return codigo;
         }
-            public void setCodigo (int val){
-                this.codigo = val;
+            public void setCodigo (int codigo){
+                this.codigo = codigo;
             }
 
         public String getRazonSocial (){
             return razonSocial;
         }
-            public void setRazonSocial (String val) {
-                this.razonSocial = val;
+            public void setRazonSocial (String razonSocial) {
+                this.razonSocial = razonSocial;
             }
     
             public Cliente(int c, String r){

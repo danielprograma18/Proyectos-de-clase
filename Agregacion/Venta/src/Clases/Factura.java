@@ -16,24 +16,24 @@ public class Factura extends Comprobante {
         return mCliente;
     }
 
-    public void setCliente(Cliente val) {
-        this.mCliente = val;
+    public void setCliente(Cliente mCliente) {
+        this.mCliente = mCliente;
     }
 
     public float getTotal() {
         return total;
     }
 
-    public void setTotal(float val) {
-        this.total = val;
+    public void setTotal(float total) {
+        this.total = total;
     }
 
     public ArrayList<Producto> getProducto() {
         return mProducto;
     }
 
-    public void setProducto(ArrayList<Producto> val) {
-        this.mProducto = val;
+    public void setProducto(ArrayList<Producto> mProducto) {
+        this.mProducto = mProducto;
     }
 
     public Factura(char t, int n, Fecha f, Cliente cli) {
