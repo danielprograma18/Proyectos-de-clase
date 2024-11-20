@@ -1,0 +1,1 @@
+<a href="programa1.php?nombre=pedro&apellido=perez> enlace a pedro perez </a>
