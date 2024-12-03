@@ -9,8 +9,8 @@
 <body>
     <div id="contenedor">
         <div id="encabezado">
-        <div class="imagen-izquierda"></div>
-        <div class="imagen-derecha"></div>
+            <div class="imagen-izquierda"></div>
+            <div class="imagen-derecha"></div>
             <h1>Sistema de Gestión Odontológica</h1>
         </div>
         <ul id="menu">
@@ -25,16 +25,16 @@
             <form action="index.php?accion=consultarCita" method="post" id="frmconsultar">
                 <table>
                     <tr>
-                        <td>Documento del Paciente</td>
-                        <td><input type="text" name="consultarDocumento" id="consultarDocumento"></td>
+                        <td>Documento del paciente</td>
+                        <td><input type="text" name="asignarDocumento" id="asignarDocumento"></td>
                     </tr>
                     <tr>
-                        <td colspan="2"><input type="submit" name="consultarConsultar" value="Consultar"
-                                id="consultarConsultar"></td>
+                        <td colspan="2"><input type="button" value="Consultar" name="asignarConsultar"
+                                id="asignarConsultar"></td>
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <div id="paciente2"></div>
+                            <div id="paciente"></div>
                         </td>
                     </tr>
                 </table>

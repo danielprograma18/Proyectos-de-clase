@@ -10,23 +10,30 @@ require_once 'Modelo/Conexion.php';
 $controlador = new Controlador();
 
 // 3. Código selector para las diferentes páginas
-if (isset($_GET["accion"])) {
-    if($_GET["accion"] == "asignar") {
-        $controlador->verPagina('Vista/html/asignar.php');
+if( isset($_GET["accion"])){
+    if($_GET["accion"] == "asignar"){
+    $controlador->verPagina('Vista/html/asignar.php');
     }
-    if($_GET["accion"] == "consultar") {
-        $controlador->verPagina('Vista/html/consultar.php');
+    elseif($_GET["accion"] == "consultar"){
+    $controlador->verPagina('Vista/html/consultar.php');
     }
-    if($_GET["accion"] == "cancelar") {
-        $controlador->verPagina('Vista/html/cancelar.php');
+    elseif($_GET["accion"] == "cancelar"){
+    $controlador->verPagina('Vista/html/cancelar.php');
     }
-} else {
-    $controlador->verPagina('Vista/html/inicio.php');
-}
-if($_GET["accion"] == "guardarCita"){
-$controlador->agregarCita($_POST["asignarDocumento"],
-$_POST["medico"], $_POST["fecha"], $_POST["hora"],
-$_POST["consultorio"]);
-}
+    elseif($_GET["accion"] == "guardarCita"){
+    $controlador->agregarCita($_POST["asignarDocumento"],
 
+    $_POST["medico"],
+    $_POST["fecha"],
+    $_POST["hora"],
+    $_POST["consultorio"]);
+    
+    }
+    elseif($_GET["accion"] == "cancelarCita"){
+        $controlador->cancelarCitas($_POST["cancelarDocumento"]);
+        }
+    } else {
+    $controlador->verPagina('Vista/html/inicio.php');
+    } 
+ 
 ?>

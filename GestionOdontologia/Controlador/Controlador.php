@@ -11,4 +11,16 @@ $id = $gestorCita->agregarCita($cita);
 $result = $gestorCita->consultarCitaPorId($id);
 require_once 'Vista/html/confirmarCita.php';
 }
+public function consultarCitas($doc){
+    $gestorCita = new GestorCita();
+    $result = $gestorCita->consultarCitasPorDocumento($doc);
+    require_once 'Vista/html/consultarCitas.php';
+    }
+public function cancelarCitas($doc){
+    $gestorCita = new GestorCita();
+    $result = $gestorCita->consultarCitasPorDocumento($doc);
+    require_once 'Vista/html/cancelarCitas.php';
+        }
+
 }
+?>
