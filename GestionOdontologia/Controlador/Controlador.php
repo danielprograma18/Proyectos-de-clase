@@ -21,6 +21,41 @@ public function cancelarCitas($doc){
     $result = $gestorCita->consultarCitasPorDocumento($doc);
     require_once 'Vista/html/cancelarCitas.php';
         }
-
+        public function consultarPaciente($doc){
+            $gestorCita = new GestorCita();
+            $result = $gestorCita->consultarPaciente($doc);
+            require_once 'Vista/html/consultarPaciente.php';
+            }
+public function agregarPaciente($doc,$nom,$ape,$fec,$sex){
+        $paciente = new Paciente($doc, $nom, $ape, $fec, $sex);
+        $gestorCita = new GestorCita();
+        $registros = $gestorCita->agregarPaciente($paciente);
+            if($registros > 0){
+                echo "Se insertó el paciente con exito";
+} else {
+echo "Error al grabar el paciente";
+}
+}
+public function cargarAsignar(){
+    $gestorCita = new GestorCita();
+    $result = $gestorCita->consultarMedicos();
+    $result2 = $gestorCita->consultarConsultorios();
+    require_once 'Vista/html/asignar.php';
+    }
+    public function consultarHorasDisponibles($medico,$fecha){
+        $gestorCita = new GestorCita();
+        $result = $gestorCita->consultarHorasDisponibles($medico,
+        $fecha);
+        require_once 'Vista/html/consultarHoras.php';
+        }
+        public function confirmarCancelarCita($cita){
+            $gestorCita = new GestorCita();
+            $registros = $gestorCita->cancelarCita($cita);
+            if($registros > 0){
+            echo "La cita se ha cancelado con éxito";
+            } else {
+            echo "Hubo un error al cancelar la cita";
+            }
+            }
 }
 ?>

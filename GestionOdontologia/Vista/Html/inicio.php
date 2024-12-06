@@ -9,8 +9,7 @@
 <body>
     <div id="contenedor">
         <div id="encabezado">
-        <div class="imagen-izquierda"></div>
-        <div class="imagen-derecha"></div>
+        
             <h1>Sistema de Gestión Odontológica</h1>
         </div>
         <ul id="menu">

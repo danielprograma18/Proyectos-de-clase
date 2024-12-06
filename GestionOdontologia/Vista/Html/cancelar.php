@@ -4,13 +4,13 @@
 <head>
     <title>Sistema de Gestión Odontológica</title>
     <link rel="stylesheet" type="text/css" href="Vista/css/estilos.css">
+    <script type="text/javascript" src="Vista/html/jquery/jquery-3.2.1-min.
+js"></script>
 </head>
 
 <body>
     <div id="contenedor">
         <div id="encabezado">
-        <div class="imagen-izquierda"></div>
-        <div class="imagen-derecha"></div>
             <h1>Sistema de Gestión Odontológica</h1>
         </div>
         <ul id="menu">
@@ -29,8 +29,7 @@
                         <td><input type="text" name="cancelarDocumento" id="cancelarDocumento"></td>
                     </tr>
                     <tr>
-                        <td colspan="2"><input type="submit" name="cancelarConsultar" value="Consultar"
-                                id="cancelarConsultar"></td>
+                        <td colspan="2"><input type="button" value="Consultar" onclick="cancelarConsultar()"></td>
                     </tr>
                     <tr>
                         <td colspan="2">

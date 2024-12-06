@@ -78,5 +78,36 @@ as consultorios ,citas "
         $conexion->cerrar();
         return $result;
     }
+    public function consultarHorasDisponibles($medico,$fecha){
+        $conexion = new Conexion();
+        $conexion->abrir();
+        $sql = "SELECT hora FROM horas WHERE hora NOT IN "
+        . "( SELECT CitHora FROM citas WHERE CitMedico = '$medico' AND
+        CitFecha = '$fecha'"
+        . " AND CitEstado = 'Solicitada') ";
+        $conexion->consulta($sql);
+        $result = $conexion->obtenerResult();
+        $conexion->cerrar();
+        return $result ;
+        }
+        public function consultarConsultorios(){
+            $conexion = new Conexion();
+            $conexion->abrir();
+            $sql = "SELECT * FROM consultorios ";
+            $conexion->consulta($sql);
+            $result = $conexion->obtenerResult();
+            $conexion->cerrar();
+            return $result ;
+            }
+            public function cancelarCita($cita){
+                $conexion = new Conexion();
+                $conexion->abrir();
+                $sql = "UPDATE citas SET CitEstado = 'Cancelada' "
+                . " WHERE CitNumero = $cita ";
+                $conexion->consulta($sql);
+                $filasAfectadas = $conexion->obtenerFilasAfectadas();
+                $conexion->cerrar();
+                return $filasAfectadas;
+                }
 }
 
